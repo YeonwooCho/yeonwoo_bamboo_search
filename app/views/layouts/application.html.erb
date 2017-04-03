@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <style> 
+  .nav {
+    list-style-type: none;
+    background-color: #BDBDBD;
+    margin: 0;
+    padding: 0;
+    float: left;
+    border-radius: 10px;
+    padding: 15px 10px;
+  }
+
+#home{
+   font-weight: bold;
+   font-size: 17px;
+   font-family: Helvetica, sans-serif;
+   text-align: center;
+   border-radius: 10px;
+   background-color: #999999;
+   padding: 7px 10px;
+}
+
+#new{
+   font-weight: bold;
+   font-size: 18px;
+   font-family: Helvetica, sans-serif;
+   text-align: center;
+   border-radius: 10px;
+   background-color: #999999;
+   padding: 5px 10px;
+}
+  </style>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <ul class="nav">
+   <div id="home">
+   <li><%= link_to 'HOME', main_path %></li>
+   </div>
+   <br>
+   <div id="new">
+   <li><%= link_to 'NEW', new_post_path %></li>
+   </div>
+  </ul>
+<%= yield %>
+
+</body>
+</html>

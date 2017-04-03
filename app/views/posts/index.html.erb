@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+  body{
+    background-color: #669966;
+    font-size: 20px;
+    margin: 20px 40px 20px 40px;
+}
+
+
+.topic{
+    background-color: #CCCCCC;
+    font-family: Arial, sans-serif;
+    line-height: 0px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #675959;
+    text-align: center;
+    margin: 40px 120px 40px 120px;
+    padding: 20px 20px 5px 20px;
+    border-radius: 30px;
+}
+
+#inner{
+    border-radius: 30px;
+    background-color: #bfc4bb;
+    line-height: 40px;
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 10px 40px;
+    color: #444343;
+}
+
+#outer{
+    background-color: #CCCCCC;
+    border-radius: 30px;
+    padding: 50px 330px;
+    float : middle;
+    width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#info
+{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #CFCFCF;
+    padding: 30px;
+}
+
+textarea#postbody{
+    resize: none;
+}
+</style>
+  <title>대나무숲 모든글보기</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="posts.css">
+</head>
+
+<body>
+    <div class="topic">
+        <img src="http://wp.production.patheos.com/blogs/pagantama/files/2016/05/tanabata.png" height="150">
+        <p>LIKELION X Bamboo Grove</p>
+    </div>
+
+  <div id="outer">
+    <% @posts.each_with_index do |p, index| %>
+  <div id="inner">
+    <br>
+    <%= index+1 %>번째 울림<br><br>
+    NAME : <%= p.title %><br>
+    <%= p.body %> <br><br>
+  </div>
+  <br>
+<% end %>
+</div>
+</div>
+  <div id="info">
+    <p>ⓒ 2017. Yeonwoo Cho all rights reserved.</p>
+    <p>CONTACT  :  010.4695.1712</p>
+  </div>
+</body>
+</html>
