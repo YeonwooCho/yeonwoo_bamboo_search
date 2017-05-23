@@ -63,6 +63,16 @@ textarea#postbody{
 </head>
 
 <body>
+    <br>
+    <hr>
+search
+<%= form_tag posts_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+
     <div class="topic">
         <img src="http://wp.production.patheos.com/blogs/pagantama/files/2016/05/tanabata.png" height="150">
         <p>LIKELION X Bamboo Grove</p>
